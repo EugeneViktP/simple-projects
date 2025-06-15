@@ -1,22 +1,19 @@
 #include <stdio.h>
 
 int max(int num1, int num2, int num3) {
-    int result;
-    if (num1 > num2) {
-        result = num1;
-    } else {
+    int result = num1;
+    if (num2 > result) {
         result = num2;
     }
-    if (result > num3) {
-        return result;
-    } else {
+    if (num3 > result) {
         result = num3;
     }
+  
     return result;
 }
 
 int main(void)
 {
-    printf("%d", max(4, 10, 8));
+    printf("%d", max(13, 10, 92));
     return 0;
 }
