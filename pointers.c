@@ -2,21 +2,19 @@
 
 int main()
 {
-    int a = 10;
+    int a = 1025;
     int *p; // value at that address
     p = &a; // adress
-    printf("%d\n", p);
-    printf("%d\n", *p); //value at that address
-    printf("%d\n", p + 1);
-    printf("%d\n", *(p + 1));
+    printf("size of intiger is %d bytes\n", sizeof(int));
+    printf("address = %d, value = %d\n", p, *p);
+    printf("address = %d, value = %d\n", p+1, *(p+1));
+    char *p0;
+    p0 = (char*)p;
+    printf("size of char is %d\n", sizeof(char));
+    printf("address = %d, value = %d\n", p0, *p0);
+    printf("address = %d, value = %d\n", p0+1, *(p0+1));
+    //00000000 00000000 00000100 00000001
 
-    // printf("%d\n", p + 2);
-    // printf("%d\n", &a);
-    // *p = 12;
-    // int b = 20;
-    // *p = b;
-    // printf("%d\n", a);
-    // printf("%d\n", p);
 
     return 0;
 }
