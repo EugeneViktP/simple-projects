@@ -1,19 +1,15 @@
 #include <stdio.h>
 
-int Increment(int a) //copy of a - local variable
+void Increment(int *p) // address of an intiger
 {
-    // a = a + 1;
-    // printf("Address of variable a in increment = %d\n", &a);
-    return a + 1;
+    *p = (*p) + 1; // increase integer value by address
 }
 
 int main(void)
 {
     int a;
     a = 10;
-    // Increment(a);
-    a = Increment(a);
-    printf("Address of variable a in main = %d\n", &a);
+    Increment(&a); // pass variable's a address to function
     printf("a = %d\n", a);
     return 0;
 }
