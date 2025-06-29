@@ -19,10 +19,10 @@ int main(void)
 
     // A = NULL;
 
-    int *B = realloc(A, 2*n*sizeof(int));
+    int *B = realloc(A, (n/2)*sizeof(int));
 
     printf("Prev block adress = %d, new address = %d\n", A, B);
-    for (int i = 0; i < 2*n; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d ", B[i]);
     }
