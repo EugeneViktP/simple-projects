@@ -18,4 +18,6 @@ int main(void)
     printf("address of a in main = %d\n", &a);
     int* ptr = Add(&a, &b); // value in x of main is copied to a of Add
     printf("Sum = %d, at address = %d", *ptr, ptr);
+    free(ptr);
+    ptr = NULL;
 }
