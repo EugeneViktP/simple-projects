@@ -7,9 +7,9 @@ void BubbleSort(int *A, int n)
     {
         for(j = 0; j < n - 1; j++) {
             if (A[j] < A[j + 1]) {
-            temp = A[j + 1];
-            A[j + 1] = A[j];
-            A[j] = temp;
+            temp = A[j];
+            A[j] = A[j + 1];
+            A[j + 1] = temp;
         }
         }
     }
