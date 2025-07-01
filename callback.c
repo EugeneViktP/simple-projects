@@ -1,19 +1,28 @@
 #include <stdio.h>
-void A()
-{
-    printf("Hello");
-}
 
-void B(void (*ptr)())  // function pointer as argument
+void BubbleSort(int *A, int n)
 {
-    ptr(); //call-back function that "ptr" points to
+    int i, j, temp;
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n -1; j++) {
+            if (A[j] > A[j + 1]) {
+            temp = A[j];
+            A[j] = A[j + 1];
+            A[j + 1] = temp;
+        }
+        }
+    }
 }
-
 
 int main(void)
 {
-    // void (*p)() = A;
-    // B(p);
-    B(A);
+
+    int i, A[] = {3, 2, 1, 5, 6, 4}; // sort in increasing order
+    BubbleSort(A, 6);
+    for (i = 0; i < 6; i++)
+    {
+        printf("%d ", A[i]);
+    }
     return 0;
 }
